@@ -57,8 +57,8 @@ def sql2(query):
 		dummy = []
 		req_str =""
 		for x in lst:
-			cur.execute("select id from requirement where requirement.requirement like '%%%s%%'"%(x))
-			ide = cur.fetchall()[0][0]
+			cur_qry = "select id from requirement where requirement.requirement like '%%%s%%'"%(x)
+			ide = exe_n_fetch(cur_qry)[0][0]
 			req_str = req_str + " or "
 			req_str = req_str + "requirement = " + str(ide)
 		final_q = "select title,number from (select course,count(requirement) as cout from course_requirement where %s group by course having count(requirement)= %s) as B join course on (B.course = course.id);"%(req_str[4:],len(lst))

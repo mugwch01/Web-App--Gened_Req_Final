@@ -148,7 +148,10 @@ function append_select_options(id,lst){
       var opt = document.createElement('option');
       opt.innerHTML = lst[i];
       opt.value = lst[i];
-      document.getElementById(id).appendChild(opt);
+      console.log(id);
+      if (document.getElementById(id) != null){
+            document.getElementById(id).appendChild(opt);
+	}
   }
   //document.getElementById(id).setAttribute('class','table table-striped table-hover table-bordered');
 }

@@ -17,7 +17,8 @@ def req_formatting(requirement):
         requirement = 'Natural World-Lab'
     return requirement
 
-conn = psycopg2.connect('postgres://txjneaedtuizfq:4254d8b76dc8a5e5bbe3214d0536a11183b69471f15c1c77e6d262d3c2f7b0b1@ec2-54-235-210-115.compute-1.amazonaws.com:5432/d6m6em1pj5585r')
+#conn = psycopg2.connect('postgres://txjneaedtuizfq:4254d8b76dc8a5e5bbe3214d0536a11183b69471f15c1c77e6d262d3c2f7b0b1@ec2-54-235-210-115.compute-1.amazonaws.com:5432/d6m6em1pj5585r')
+conn = psycopg2.connect('postgres://pumgxjfkrvhnvr:2acf1e1d19c4660eaba9f7391d5e0fad70da99d41e8f4a188e86a3ab72c5fcc3@ec2-54-235-159-101.compute-1.amazonaws.com:5432/d3vcufbedpte6k')
 cur = conn.cursor()
 
 #getting data(list) from gened.json

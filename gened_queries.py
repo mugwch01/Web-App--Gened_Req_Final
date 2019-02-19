@@ -6,8 +6,11 @@ import urllib
 #import urllib.parse as urlparse
 import psycopg2
 
-#conn = psycopg2.connect('postgres://txjneaedtuizfq:4254d8b76dc8a5e5bbe3214d0536a11183b69471f15c1c77e6d262d3c2f7b0b1@ec2-54-235-210-115.compute-1.amazonaws.com:5432/d6m6em1pj5585r')
-#cur = conn.cursor()
+'''
+def connect_db():
+	conn = psycopg2.connect('postgres://pumgxjfkrvhnvr:2acf1e1d19c4660eaba9f7391d5e0fad70da99d41e8f4a188e86a3ab72c5fcc3@ec2-54-235-159-101.compute-1.amazonaws.com:5432/d3vcufbedpte6k')
+	return conn
+'''
 
 
 def connect_db():
@@ -19,7 +22,7 @@ def connect_db():
 	try:
 		urllib.parse.uses_netloc.append("postgres")
 		url = urllib.parse.urlparse(os.environ["DATABASE_URL"])
-		db = psycopg2.connect(
+		conn = psycopg2.connect(
 		   database=url.path[1:],
 		   user=url.username,
 		   password=url.password,
@@ -27,7 +30,7 @@ def connect_db():
 		   port=url.port
 		)
 
-		return db
+		return conn
 
 	except Exception as ex:
 		print(ex)
