@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>{% block title %}    {% endblock %}</title>
+    <link rel="stylesheet" href="../static/bootstrap.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"-->
+    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script-->
+    <link rel="stylesheet" href="../static/gened.css">
+    <!--script src="../static/jquery-1.js"></script-->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse" width="100%">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/courses">Courses</a></li>
+        </ul>
+      </div>
+      </br>
+    </nav>
+
+    <div class="spacer_top">
+    </div>
+
+    {% block contents %}
+    {% endblock %}
+
+    <div id="top5courses" class="padded_blocks">
+      <br>
+      <br>
+      <h3 align="center">Top 5 courses that fulfill the most requirements</h3>
+      <br>
+      <table id="top5" class="table table-hover table-bordered"> <!--table-striped  -->
+        <tbody><tr>
+          <th class="table-headings">Course Title</th>
+          <th class="table-headings">Course Number</th>
+          <th class="table-headings">Number of Requirements fulfilled</th>
+        </tr>
+      </tbody>
+    </table>
+      <br>
+    </div>
+
+    <div class="spacer_bottom">
+    </div>
+
+    <div id="footer" class="padded_blocks">
+    </div>
+    <div class="spacer_bottom">
+    </div>
+
+    <script type="text/javascript" src="../static/list_of_course_numbers.js"></script>
+    <script type="text/javascript" src="../static/list_of_course_titles.js"></script>
+    <script type="text/javascript" src="../static/list_of_requirements.js"></script>
+    <script type="text/javascript" src="../static/gened.js"></script>
+  </body>
+</html>

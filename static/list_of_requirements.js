@@ -1,0 +1,1 @@
+var course_req_lst =['Human Expression-Primary Texts','Intercultural','Historical','Natural World-Nonlab','Religion','Human Expression','Skills','Human Behavior','Human Behavior-Social Science Methods','Quantitative','Natural World-Lab','Biblical Studies','Wellness']

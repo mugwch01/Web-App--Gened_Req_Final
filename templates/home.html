@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block contents%}
+  <div id="checkboxes" class="home_contents padded_blocks">
+    <form class="form-inline" name="edit_form">
+      <div class="form-group">
+        <h3>Requirements:</h3>
+        <br>
+        <label>Human Expression-Primary Texts:  </label>
+        <input class="form-control" id="req1" name="req1" value="Human Expression-Primary Texts" type="checkbox">
+        <br>
+        <label>Intercultural:  </label>
+        <input id="req2" class="form-control" name="req2" value="Intercultural" type="checkbox">
+        <br>
+        <label>Historical:  </label>
+        <input id="req3" class="form-control" name="req3" value="Historical" type="checkbox">
+        <br>
+        <label>Natural World-Nonlab:  </label>
+        <input id="req4" class="form-control" name="req4" value="Natural World-Nonlab" type="checkbox">
+        <br>
+        <label>Religion:  </label>
+        <input id="req5" class="form-control" name="req5" value="Religion" type="checkbox">
+        <br>
+        <label>Human Expression:  </label>
+        <input id="req6" class="form-control" name="req6" value="Human Expression" type="checkbox">
+        <br>
+        <label>Skills:  </label>
+        <input id="req7" class="form-control" name="req7" value="Skills" type="checkbox">
+        <br>
+        <label>Human Behavior:  </label>
+        <input id="req8" class="form-control" name="req8" value="Human Behavior" type="checkbox">
+        <br>
+        <label>Human Behavior-Social Science Methods:  </label>
+        <input id="req9" class="form-control" name="req9" value="Human Behavior-Social Science Methods" type="checkbox">
+        <br>
+        <label>Quantitative: </label>
+        <input id="req10" class="form-control" name="req10" value="Quantitative" type="checkbox">
+        <br>
+        <label>Natural World-Lab:  </label>
+        <input id="req11" class="form-control" name="req11" value="Natural World-Lab" type="checkbox">
+        <br>
+        <label>Biblical Studies:  </label>
+        <input id="req12" class="form-control" name="req12" value="Biblical Studies" type="checkbox">
+        <br>
+        <label>Wellness:  </label>
+        <input id="req13" class="form-control" name="req13" value="Wellness" type="checkbox">
+      </div>
+      <br>
+      <br>
+      <button id="search_req" type="button" class="btn btn-default" name="search_req" value="search_req" onclick="pc.search_by_req()"> Search</button>      
+    </form>
+  </div>
+
+  <div id="courses_satisfying_req" class="padded_blocks home_contents">
+    <h3>Courses that fulfills the Requirements: </h3>
+    <br>
+    <table id="course_r" class="table table-hover table-bordered"> <!--table-striped table-hover  -->
+      <tbody><tr>
+        <th class="table-headings">Course Title</th>
+        <th class="table-headings">Course Number</th>
+      </tr>
+    </tbody>
+
+  </table>
+  </div>
+{% endblock %}
+
+{{ super() }}
