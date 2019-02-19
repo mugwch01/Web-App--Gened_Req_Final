@@ -3,7 +3,6 @@
 
 import os
 import urllib
-#import urllib.parse as urlparse
 import psycopg2
 
 '''
@@ -38,26 +37,6 @@ def connect_db():
 		return	
 
 
- 
-
-'''
-def connect_db():
-	url = urlparse.urlparse(os.environ['DATABASE_URL'])
-	dbname = url.path[1:]
-	user = url.username
-	password = url.password
-	host = url.hostname
-	port = url.port
-
-	con = psycopg2.connect(
-            	dbname=dbname,
-            	user=user,
-            	password=password,
-            	host=host,
-            	port=port
-           	 )
-	return con 
-'''
 
 def exe_n_fetch(query):
 	conn = connect_db()

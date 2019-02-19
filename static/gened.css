@@ -44,8 +44,8 @@ h3,h4,h6 {
 }
 .spacer_top {
   width: 100%;
-  height: 350px;
-  background-image: url('data/images/planning1.jpg');
+  height: 200px;
+  background-image: url('data/images/gened_pic.png');
 }
 .spacer_bottom {
   width: 100%;
@@ -78,4 +78,7 @@ tr:hover {
 }
 .table-headings {
   color: blue;
+}
+.log_spacer {
+  height: auto;
 }
