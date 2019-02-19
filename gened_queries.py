@@ -3,10 +3,12 @@
 
 import os
 import urllib
+#import urllib.parse as urlparse
 import psycopg2
 
 #conn = psycopg2.connect('postgres://txjneaedtuizfq:4254d8b76dc8a5e5bbe3214d0536a11183b69471f15c1c77e6d262d3c2f7b0b1@ec2-54-235-210-115.compute-1.amazonaws.com:5432/d6m6em1pj5585r')
 #cur = conn.cursor()
+
 
 def connect_db():
 	print("In connect_db")
@@ -32,6 +34,27 @@ def connect_db():
 		print("Unable to connect to database on system.")
 		return	
 
+
+ 
+
+'''
+def connect_db():
+	url = urlparse.urlparse(os.environ['DATABASE_URL'])
+	dbname = url.path[1:]
+	user = url.username
+	password = url.password
+	host = url.hostname
+	port = url.port
+
+	con = psycopg2.connect(
+            	dbname=dbname,
+            	user=user,
+            	password=password,
+            	host=host,
+            	port=port
+           	 )
+	return con 
+'''
 
 def exe_n_fetch(query):
 	conn = connect_db()
